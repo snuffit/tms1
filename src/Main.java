@@ -73,6 +73,7 @@ public class Main {
     }
 
     public static void getFactorialByNum() {
+        while (true) {
             System.out.print("Введите число: ");
             if (sc.hasNextInt()) {
                 int resultNum = 0;
@@ -81,8 +82,11 @@ public class Main {
                     resultNum += i;
                 }
                 System.out.println(resultNum);
+                return;
             } else {
                 System.out.println("Incorrect num");
+                sc.next();
             }
+        }
     }
 }
