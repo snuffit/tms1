@@ -41,7 +41,7 @@ public class Main {
         atm.addCash(0, 1, 3);
         System.out.println(atm);
         System.out.println();
-        if(atm.withdrawCash(170)){
+        if(atm.withdrawCash(180)){
             System.out.println("Успешно сняты деньги");
         }else {
             System.out.println("Что-то пошло не так");

@@ -39,7 +39,7 @@ public class ATM {
             cashValueHungered = remains / 100;
             remains -= cashValueHungered * 100;
         }
-        if (remains > 60 || remains == 50) {
+        if (remains % 2 != 0 && remains >= 50) {
             cashValueFifty = 1;
             remains -= 50;
         }
