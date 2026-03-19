@@ -6,6 +6,6 @@ package main.shapes;
  */
 public interface Shape {
 
-    public int getSquare();
-    public int getPerimeter();
+    double getSquare();
+    double getPerimeter();
 }
