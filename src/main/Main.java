@@ -6,6 +6,8 @@ import main.doctor.Surgeon;
 import main.doctor.Therapist;
 import main.patient.Patient;
 
+import java.lang.reflect.Field;
+
 /**
  * @author Pstyga Stas
  * @created 25.03.2026
@@ -33,5 +35,18 @@ public class Main {
         //Создать класс Apple и добавить в него поле color с модификатором доступа private и
         //инициализировать его. В методе main другого класса создать объект Apple, и не
         //используя сеттеры изменить значение поля color.
+
+        Apple apple = new Apple("Green");
+        System.out.println(apple);
+
+        try {
+            Field field = apple.getClass().getDeclaredField("color");
+            field.setAccessible(true);
+            field.set(apple, "Black");
+        } catch (NoSuchFieldException | IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
+
+        System.out.println(apple);
     }
 }
