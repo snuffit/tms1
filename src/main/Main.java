@@ -2,6 +2,8 @@ package main;
 
 import main.animals.Animal;
 import main.animals.Animals;
+import main.students.Student;
+import main.students.University;
 
 import java.util.*;
 import java.util.stream.Stream;
@@ -42,6 +44,15 @@ public class Main {
         //printStudents(List<Student> students, int course), который получает список студентов и
         //номер курса. А также печатает на консоль имена тех студентов из списка, которые
         //обучаются на данном курсе.
+        University tehnikUm = new University();
+        tehnikUm.addStudent(new Student("Pasha", "228", 2, 1.9));
+        tehnikUm.addStudent(new Student("Grusha", "227", 3, 3.9));
+        tehnikUm.addStudent(new Student("Misha", "228", 2, 3.0));
+        tehnikUm.addStudent(new Student("Zhisha", "229", 1, 4.0));
+        tehnikUm.getStudentsInfo();
+        tehnikUm.transferToNextCourse();
+        tehnikUm.getStudentsInfo();
+        tehnikUm.getStudentsFromCourse(3);
 
         //Задача *:
         //Представим, что в Java нет коллекции типа ArrayList. Создать свой класс, симулирующий
@@ -58,6 +69,14 @@ public class Main {
         //по умолчанию. Предусмотреть конструктор с задаваемым размером внутреннего
         //массива. Предусмотреть возможность автоматического расширения коллекции при
         //добавлении элемента в том случае, когда коллекция уже заполнена.
+        CustomArrayList<Integer> customList = new CustomArrayList<>();
+        customList.add(3);
+        customList.add(4);
+        customList.add(5);
+        customList.add(6);
+        System.out.println(customList);
+        customList.remove(2);
+        System.out.println(customList);
     }
 
     public static void getUniqueNums(String nums) {
